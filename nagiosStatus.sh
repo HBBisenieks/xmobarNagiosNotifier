@@ -50,7 +50,8 @@ rm -f statPage statPageLog
 
 # set the rest of the variables only if server is reachable
 # status is for UNHANDLED problems, for all problems, remove everything between ? and servicestatustypes=28
-page="/nagios/cgi-bin/status.cgi?host=all&type=detail&hoststatustypes=3&serviceprops=42&servicestatustypes=28"
+servicePage="/nagios/cgi-bin/status.cgi?host=all&type=detail&hoststatustypes=3&serviceprops=42&servicestatustypes=28"
+hostPage="/nagios/cgi-bin/status.cgi?hostgroup=all&style=hostdetail&hoststatustypes=12&hostprops=42"
 options="-T 10 -t 4 -w 1 --retry-connrefused --server-response"
 
 # username and password for nagios user if server is secured with htpasswd
